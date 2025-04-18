@@ -1,21 +1,391 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Поехали!</title>
-    <meta name="description" content="Poehali.dev — запусти свой сайт за минуту!" />
-    <meta name="author" content="poehali.dev" />
-     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Virtual Reality Academy - Будущее образования с AR/VR</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="container header-container">
+      <a href="/" class="logo">
+        <span class="vra-gradient-text">VRA</span>
+      </a>
+      
+      <!-- Навигация для десктопа -->
+      <nav class="desktop-nav">
+        <ul class="nav-list">
+          <li><a href="/" class="nav-link">Главная</a></li>
+          <li class="dropdown">
+            <button class="dropdown-trigger">Обучение</button>
+            <div class="dropdown-content">
+              <div class="dropdown-grid">
+                <div class="featured-course">
+                  <a href="/courses" class="featured-link">
+                    <div class="featured-title">Курсы в AR/VR</div>
+                    <p class="featured-desc">Изучайте передовые технологии с профессионалами</p>
+                  </a>
+                </div>
+                <div class="course-list">
+                  <a href="/vr-courses" class="course-link">
+                    <div class="course-title">VR-курсы</div>
+                    <p class="course-desc">Погрузитесь в виртуальную реальность</p>
+                  </a>
+                  <a href="/ar-courses" class="course-link">
+                    <div class="course-title">AR-курсы</div>
+                    <p class="course-desc">Дополненная реальность вокруг нас</p>
+                  </a>
+                  <a href="/workshops" class="course-link">
+                    <div class="course-title">Мастер-классы</div>
+                    <p class="course-desc">Интенсивы с экспертами отрасли</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li><a href="/about" class="nav-link">О нас</a></li>
+          <li><a href="/contact" class="nav-link">Контакты</a></li>
+        </ul>
+      </nav>
 
-    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS COMMENT! -->
-    <script src="https://cdn.poehali.dev/intertnal/js/pp-min-2.js"></script>
-    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS COMMENT! -->
+      <div class="auth-buttons">
+        <a href="/login" class="btn btn-outline">Войти</a>
+        <a href="/signup" class="btn btn-primary">Записаться</a>
+      </div>
 
-  </head>
+      <!-- Кнопка мобильного меню -->
+      <button class="mobile-menu-btn" aria-label="Открыть меню">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="menu-icon">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+    <!-- Мобильное меню -->
+    <div class="mobile-menu">
+      <nav class="mobile-nav">
+        <a href="/" class="mobile-nav-link">Главная</a>
+        <a href="/courses" class="mobile-nav-link">Курсы</a>
+        <a href="/about" class="mobile-nav-link">О нас</a>
+        <a href="/contact" class="mobile-nav-link">Контакты</a>
+        <div class="mobile-buttons">
+          <a href="/login" class="btn btn-outline w-full">Войти</a>
+          <a href="/signup" class="btn btn-primary w-full">Записаться</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Секция Hero -->
+    <section class="hero">
+      <div class="hero-bg">
+        <div class="bg-overlay"></div>
+        <div class="bg-gradient"></div>
+      </div>
+
+      <div class="container hero-content">
+        <h1 class="hero-title">
+          Будущее образования с технологиями 
+          <span class="vra-gradient-text">AR/VR</span>
+        </h1>
+        
+        <p class="hero-description">
+          Virtual Reality Academy — инновационная школа, где традиционное образование 
+          встречается с технологиями виртуальной и дополненной реальности
+        </p>
+        
+        <div class="hero-buttons">
+          <a href="/signup" class="btn btn-primary">
+            Начать обучение
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="arrow-icon">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          <a href="/about" class="btn btn-outline-light">Узнать больше</a>
+        </div>
+      </div>
+
+      <!-- Декоративные элементы -->
+      <div class="hero-bottom-fade"></div>
+      <div class="blob blob-pink"></div>
+      <div class="blob blob-blue"></div>
+    </section>
+
+    <!-- Секция Особенности -->
+    <section class="features">
+      <div class="container">
+        <h2 class="section-title">Почему выбирают нас</h2>
+        <p class="section-subtitle">Уникальные преимущества обучения в Virtual Reality Academy</p>
+        
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">🚀</div>
+            <h3 class="feature-title">Инновационный подход</h3>
+            <p class="feature-description">Обучение в виртуальной среде с погружением на 360°</p>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon">👨‍🏫</div>
+            <h3 class="feature-title">Эксперты отрасли</h3>
+            <p class="feature-description">Преподаватели с опытом работы в ведущих AR/VR студиях</p>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon">🔄</div>
+            <h3 class="feature-title">Практика с первого дня</h3>
+            <p class="feature-description">Создавайте собственные проекты с первого занятия</p>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon">🌍</div>
+            <h3 class="feature-title">Доступ откуда угодно</h3>
+            <p class="feature-description">Учитесь из любой точки мира, нужен только VR-шлем</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Секция Курсы -->
+    <section class="courses">
+      <div class="container">
+        <h2 class="section-title">Популярные курсы</h2>
+        <p class="section-subtitle">Выберите курс и начните свой путь в мир AR/VR</p>
+        
+        <div class="courses-grid">
+          <div class="course-card">
+            <img src="placeholder.svg" alt="VR разработка" class="course-image">
+            <div class="course-level">Начальный</div>
+            <h3 class="course-title">Основы VR разработки</h3>
+            <p class="course-description">Создайте свое первое VR приложение с нуля</p>
+            <div class="course-stats">
+              <span class="course-duration">8 недель</span>
+              <span class="course-rating">⭐ 4.9</span>
+            </div>
+            <a href="/courses/vr-basics" class="btn btn-secondary w-full">Подробнее</a>
+          </div>
+          
+          <div class="course-card">
+            <img src="placeholder.svg" alt="AR приложения" class="course-image">
+            <div class="course-level">Средний</div>
+            <h3 class="course-title">Разработка AR приложений</h3>
+            <p class="course-description">Научитесь создавать AR эффекты и интерактивные элементы</p>
+            <div class="course-stats">
+              <span class="course-duration">10 недель</span>
+              <span class="course-rating">⭐ 4.8</span>
+            </div>
+            <a href="/courses/ar-development" class="btn btn-secondary w-full">Подробнее</a>
+          </div>
+          
+          <div class="course-card">
+            <img src="placeholder.svg" alt="3D моделирование" class="course-image">
+            <div class="course-level">Продвинутый</div>
+            <h3 class="course-title">3D моделирование для VR</h3>
+            <p class="course-description">Создание оптимизированных 3D моделей для виртуальной реальности</p>
+            <div class="course-stats">
+              <span class="course-duration">12 недель</span>
+              <span class="course-rating">⭐ 4.7</span>
+            </div>
+            <a href="/courses/3d-modeling" class="btn btn-secondary w-full">Подробнее</a>
+          </div>
+        </div>
+        
+        <div class="courses-footer">
+          <a href="/courses" class="btn btn-primary">
+            Все курсы
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="arrow-icon">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Секция Отзывы -->
+    <section class="testimonials">
+      <div class="container">
+        <h2 class="section-title">Что говорят студенты</h2>
+        <p class="section-subtitle">Отзывы участников наших курсов</p>
+        
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <p class="testimonial-text">
+                "Курс превзошел все мои ожидания! За два месяца я прошел путь от новичка до разработчика, способного создавать собственные VR проекты."
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <img src="placeholder.svg" alt="Алексей" class="testimonial-avatar">
+              <div class="testimonial-info">
+                <p class="testimonial-name">Алексей Смирнов</p>
+                <p class="testimonial-position">Выпускник курса VR разработки</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <p class="testimonial-text">
+                "Лучшие инвестиции в свое развитие. Особенно понравилась практическая часть — мы сразу применяли знания на реальных проектах."
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <img src="placeholder.svg" alt="Мария" class="testimonial-avatar">
+              <div class="testimonial-info">
+                <p class="testimonial-name">Мария Ковалева</p>
+                <p class="testimonial-position">Game Designer</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <p class="testimonial-text">
+                "Преподаватели действительно эксперты своего дела. Всегда отвечают на вопросы и помогают с решением сложных задач."
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <img src="placeholder.svg" alt="Дмитрий" class="testimonial-avatar">
+              <div class="testimonial-info">
+                <p class="testimonial-name">Дмитрий Петров</p>
+                <p class="testimonial-position">AR Developer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Секция CTA -->
+    <section class="cta">
+      <div class="container">
+        <div class="cta-card">
+          <h2 class="cta-title">Готовы начать свой путь в мир AR/VR?</h2>
+          <p class="cta-description">
+            Присоединяйтесь к сообществу инноваторов и создавайте технологии будущего вместе с нами
+          </p>
+          <a href="/signup" class="btn btn-primary btn-lg">
+            Начать обучение
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="arrow-icon">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-info">
+          <div class="footer-logo">
+            <span class="vra-gradient-text">VRA</span>
+          </div>
+          <p class="footer-description">
+            Virtual Reality Academy — платформа для изучения технологий виртуальной и дополненной реальности
+          </p>
+          <div class="footer-social">
+            <a href="#" class="social-link" aria-label="Facebook">
+              <svg width="24" height="24" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Twitter">
+              <svg width="24" height="24" viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Instagram">
+              <svg width="24" height="24" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="LinkedIn">
+              <svg width="24" height="24" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+          </div>
+        </div>
+        
+        <div class="footer-links">
+          <div class="footer-column">
+            <h3 class="footer-heading">Курсы</h3>
+            <ul class="footer-list">
+              <li><a href="/courses/vr">VR разработка</a></li>
+              <li><a href="/courses/ar">AR приложения</a></li>
+              <li><a href="/courses/3d">3D моделирование</a></li>
+              <li><a href="/courses/game-dev">Game Development</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-column">
+            <h3 class="footer-heading">Академия</h3>
+            <ul class="footer-list">
+              <li><a href="/about">О нас</a></li>
+              <li><a href="/team">Команда</a></li>
+              <li><a href="/blog">Блог</a></li>
+              <li><a href="/careers">Карьера</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-column">
+            <h3 class="footer-heading">Поддержка</h3>
+            <ul class="footer-list">
+              <li><a href="/faq">FAQ</a></li>
+              <li><a href="/contact">Контакты</a></li>
+              <li><a href="/help">Помощь</a></li>
+              <li><a href="/privacy">Конфиденциальность</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p class="copyright">© 2024 Virtual Reality Academy. Все права защищены.</p>
+        <div class="footer-legal">
+          <a href="/terms">Условия использования</a>
+          <a href="/privacy">Политика конфиденциальности</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Простой скрипт для мобильного меню
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuBtn = document.querySelector('.mobile-menu-btn');
+      const mobileMenu = document.querySelector('.mobile-menu');
+      
+      menuBtn.addEventListener('click', function() {
+        mobileMenu.classList.toggle('active');
+        
+        const isExpanded = menuBtn.getAttribute('aria-expanded') === 'true';
+        menuBtn.setAttribute('aria-expanded', !isExpanded);
+        
+        // Сменить иконку
+        const menuIcon = menuBtn.querySelector('svg');
+        if (mobileMenu.classList.contains('active')) {
+          menuIcon.innerHTML = '<line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line>';
+          menuBtn.setAttribute('aria-label', 'Закрыть меню');
+        } else {
+          menuIcon.innerHTML = '<line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>';
+          menuBtn.setAttribute('aria-label', 'Открыть меню');
+        }
+      });
+      
+      // Закрыть меню при клике на ссылку в мобильном меню
+      const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          mobileMenu.classList.remove('active');
+          menuBtn.setAttribute('aria-expanded', 'false');
+          const menuIcon = menuBtn.querySelector('svg');
+          menuIcon.innerHTML = '<line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>';
+          menuBtn.setAttribute('aria-label', 'Открыть меню');
+        });
+      });
+    });
+  </script>
+</body>
 </html>
